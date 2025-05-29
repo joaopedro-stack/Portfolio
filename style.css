@@ -404,10 +404,11 @@ body::-webkit-scrollbar-thumb {
 
 
 main {
-    padding-top: 50px;
+    padding-top: calc(20px + 88px);
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 25px;
 }
 
@@ -1270,6 +1271,7 @@ footer h3 {
 
     #home {
         display: flex;
+        align-items: baseline;
         width: 90%;
     }
 
@@ -1298,6 +1300,10 @@ footer h3 {
 
     .menu {
         display: none;
+    }
+
+     #home{
+        height: 75vh;
     }
 
     .home-txt h3 {
@@ -1389,16 +1395,9 @@ footer h3 {
         font-size: 1em;
     }
 
-    main {
-        padding-top: 0px;
-    }
-
 }
 
 @media screen and (max-width:500px) {
-    main {
-        padding-top: 40px;
-    }
 
     #intro i {
         font-size: 1.3em;
