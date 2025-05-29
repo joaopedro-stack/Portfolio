@@ -416,7 +416,7 @@ header {
     padding: 20px 8%;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 100vw;
     z-index: 10;
     top: 0;
     left: 0;
@@ -1139,6 +1139,7 @@ a {
 
 .active-section {
     display: flex;
+    width: 100%;
     height: auto;
 }
 
@@ -1174,6 +1175,7 @@ a {
 .abilities a {
     width: 11%;
 }
+
 .ability {
     text-align: center;
     display: flex;
@@ -1187,7 +1189,7 @@ a {
     color: #fff;
     border-radius: 10px;
     cursor: pointer;
-    height: 25%;
+    height: 150px;
 }
 
 .ability img {
@@ -1275,8 +1277,9 @@ footer h3 {
         width: 45%;
     }
 
-    .ability{
-        padding: 10px;
+    .ability {
+        padding: 5px;
+        height: 150px;
     }
 }
 
@@ -1287,6 +1290,10 @@ footer h3 {
 
     #intro h1 {
         font-size: 2em;
+    }
+
+    header {
+        padding: 20px 40px;
     }
 
     .menu {
@@ -1502,8 +1509,12 @@ footer h3 {
         width: 25%;
     }
 
-    .ability h3{
+    .ability h3 {
         font-size: .8em;
+    }
+
+    .ability {
+        height: 100px;
     }
 
     .buttons a {
@@ -1566,10 +1577,11 @@ footer h3 {
         font-size: 1em;
     }
 
-    .project-choice h2{
+    .project-choice h2 {
         font-size: .9em;
     }
-    .project-choice i{
+
+    .project-choice i {
         font-size: 1.5em;
     }
 
