@@ -25,13 +25,13 @@ choices.forEach(choice => {
     certificates.classList.remove('active-section');
     abilities.classList.remove('active-section');
 
-    const selected = choice.dataset.project;
+    const selected = choice.dataset.choice;
 
     if (selected === 'projects') {
       projects.classList.add('active-section');
     } else if (selected === 'certificates') {
       certificates.classList.add('active-section');
-    } else{
+    } else {
       abilities.classList.add('active-section');
     }
 
@@ -110,7 +110,17 @@ $(document).ready(function () {
   });
 
   $('.project-item').on('click', function () {
-    var project = $(this).find('.project-title h4').text();
+    var project = $(this).find('.project-about h4').text();
+    var projectdescription = $('.project-description');
+    var usedproject = $('.used-project');
+    var projectselected = $(this).data('project');
+    if (projectselected == "Destino dos Sonhos") {
+      projectdescription.html(`Criei esse projeto para ele ser uma Landing Page para uma agência de viagens, foi muito gratificante fazer esse projeto pois pude treinar muito a CSS e como estilizar uma página com ele.`);
+      usedproject.html(`HTML <br> CSS <br> Jquery`)
+    } else if (projectselected == "Weather App") {
+      projectdescription.html(`Neste projeto utilizei o Vite para criar um app em React a idéia do projeto e mostrar a previsão do tempo atual e a dos próximos 5 dias com base na cidade que você pesquisar. <br><br> Utilizei o Axios para consumir a API do OpenWeather para buscar as informações sobre o clima também utilizei a API da Unsplash que gera as imagens de fundo da tela ele também utiliza a cidade que você utilizou como parametro para buscar a próxima imagem de fundo.`);
+      usedproject.html(`Unsplash API <br> OpenWeather API <br> React <br> HTML <br> CSS <br> Javascript`)
+    }
     $('.view-project').addClass('show showCertificate').find('h2').text(project);
     $('body').addClass('mostrar-before');
   });
@@ -124,16 +134,6 @@ $(document).ready(function () {
       $('body').removeClass('mostrar-before');
     }
   })
-  $('.project-item').hover(
-    function () {
-      $(this).find('.project-about').hide();
-      $(this).addClass('hide-before hovered');
-    },
-    function () {
-      $(this).find('.project-about').show();
-      $(this).removeClass('hide-before hovered');
-    }
-  );
   $('.modes').change(function () {
     if ($(this).is(':checked')) {
       $('body').addClass('light-mode');

@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    background-color: #1c132e;
+    background-color: yellow;
     height: 100vh;
     font-family: 'Poppins', sans-serif;
     position: relative;
@@ -76,7 +76,6 @@ body.light-mode .home-img {
     filter: drop-shadow(#151922 2px 2px 30px);
 }
 
-
 body.light-mode header,
 body.light-mode footer {
     background-color: #9C8867;
@@ -116,16 +115,17 @@ body.light-mode .buttons a {
     background: linear-gradient(90deg, #080808 0%, #363636 100%);
 }
 
-body.light-mode .buttons a:hover {
-    background: #151922;
-}
-
+body.light-mode .buttons a:hover,
 body.light-mode #home li {
-    background-color: #151922;
+    background: #151922;
 }
 
 body.light-mode .ability:hover img {
     filter: drop-shadow(1px 3px 10px #151922);
+}
+
+body.light-mode .socialmedias i:hover {
+    background-color: #9C8867;
 }
 
 body.light-mode .ability h3 {
@@ -149,7 +149,6 @@ body.light-mode .certificate {
     background-color: #9C8867;
 }
 
-
 body.light-mode .typewriter::after {
     content: "";
     border-right: 1px solid #151922;
@@ -169,7 +168,7 @@ body.light-mode .project-item {
 }
 
 body.light-mode .about-img img {
-    border: 5px solid #151922
+    border: 5px solid #151922;
 }
 
 body.light-mode .socialmedias a {
@@ -183,7 +182,6 @@ body.light-mode header h1 {
     -webkit-text-fill-color: transparent;
     filter: none;
 }
-
 
 body.light-mode::-webkit-scrollbar {
     width: 10px;
@@ -353,7 +351,6 @@ body::-webkit-scrollbar-thumb {
     animation: saidaanimationleft .4s ease forwards;
 }
 
-
 @keyframes entradaanimationright {
     0% {
         opacity: 0;
@@ -402,14 +399,13 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-
 main {
-    padding-top: calc(20px + 88px);
+    padding-top: calc(50px + 88px);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 25px;
+    gap: 35px;
 }
 
 header {
@@ -417,7 +413,7 @@ header {
     padding: 20px 8%;
     display: flex;
     flex-direction: column;
-    width: 100vw;
+    width: 100%;
     z-index: 10;
     top: 0;
     left: 0;
@@ -507,7 +503,6 @@ header h1 {
     transform: translateX(30px);
 }
 
-
 #mobile_btn {
     display: none;
 }
@@ -538,7 +533,6 @@ li {
 
 .ativa {
     color: #815BD4;
-
     font-weight: 500;
 }
 
@@ -548,12 +542,24 @@ li {
     text-shadow: 1px 1px 2px #815BD4;
 }
 
+.socialmedias i:hover{
+    background-color: #363636
+}
+
+.buttons a:hover{
+    background: #815BD4;
+}
+
+.ability:hover img{
+    filter: drop-shadow(1px 3px 10px #f2f2f2);
+}
+
 #home {
     display: flex;
     justify-content: space-between;
     align-items: center;
     filter: drop-shadow(2px 2px 30px #815bd4);
-    height: calc(100vh - 78px);
+    height: auto;
     width: 90%;
 }
 
@@ -584,7 +590,6 @@ li {
     color: #fff;
 }
 
-
 .home-txt h1 span:nth-child(1) {
     color: #fff;
 }
@@ -612,12 +617,6 @@ li {
     transition: transform .4s;
 }
 
-
-.buttons a:hover {
-    transform: scale(.95);
-    background: #815BD4;
-}
-
 .socialmedias i {
     background-color: rgba(36, 36, 36, 0.6);
     padding: 8px 10px;
@@ -631,11 +630,6 @@ li {
 .socialmedias a {
     border-radius: 10px;
     box-shadow: 1px 1px 10px #fff;
-}
-
-.socialmedias a:hover {
-    background-color: #555252;
-    transform: scale(.95);
 }
 
 .socialmedias {
@@ -796,7 +790,6 @@ li {
     100% {
         content: "";
     }
-
 }
 
 .typewriter::before {
@@ -812,7 +805,6 @@ li {
 .buttons i {
     font-size: 1em;
 }
-
 
 #about {
     display: flex;
@@ -959,10 +951,16 @@ li {
     transition: transform 0.5s ease;
 }
 
-.project-item.hovered {
+.project-item:hover {
     z-index: 5;
     transform: scale(1.2);
 }
+
+.project-item:hover .project-about,
+.project-item:hover::before {
+    display: none;
+}
+
 
 .project-item::before {
     content: '';
@@ -973,10 +971,6 @@ li {
     width: 100%;
     height: 100%;
     z-index: 0;
-}
-
-.project-item.hide-before::before {
-    display: none;
 }
 
 .project-about {
@@ -1002,9 +996,8 @@ li {
     transition: transform .4s ease;
 }
 
-.btn-project:hover {
+.btn-project:hover{
     background: #f700ea;
-    transform: scale(.95);
 }
 
 .abilities-used {
@@ -1062,8 +1055,6 @@ a {
     cursor: pointer;
 }
 
-
-
 .certificates {
     display: none;
     justify-content: center;
@@ -1112,9 +1103,39 @@ a {
     border-radius: 5px;
     padding: 20px;
     display: none;
-    align-items: center;
     justify-content: space-around;
     gap: 35px;
+}
+
+.iframe-btns{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.project-sobre{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.project-name{
+    font-size: 2em;
+    color: #815BD4;
+    text-shadow: 1px 1px 1px #f2f2f2;
+    text-align: center;
+}
+
+.project-description,
+.used-project{
+    font-size: .8em;
+    font-weight: 300;
+    color: #f2f2f2;
+}
+
+.content-project{
+    width: 50%;
 }
 
 .btns {
@@ -1190,16 +1211,12 @@ a {
     color: #fff;
     border-radius: 10px;
     cursor: pointer;
-    height: 150px;
+    height: 170px;
 }
 
 .ability img {
     width: 60%;
     height: auto;
-}
-
-.ability:hover img {
-    filter: drop-shadow(1px 3px 10px #fff);
 }
 
 .ability img {
@@ -1244,14 +1261,11 @@ a {
     animation: bounceInRight 0.7s ease-out forwards;
 }
 
-
-
 footer h3 {
     color: #fff;
 }
 
-
-@media screen and (max-width:1280px) {
+@media screen and (max-width: 1280px) {
     .home-img {
         display: none;
     }
@@ -1285,7 +1299,7 @@ footer h3 {
     }
 }
 
-@media screen and (max-width:1000px) {
+@media screen and (max-width: 1000px) {
     #intro i {
         font-size: 1.5em;
     }
@@ -1302,10 +1316,6 @@ footer h3 {
         display: none;
     }
 
-     #home{
-        height: 75vh;
-    }
-
     .home-txt h3 {
         width: 80%;
     }
@@ -1318,6 +1328,16 @@ footer h3 {
         width: 100%;
         gap: 10px;
     }
+
+    .project-item:hover .project-about,
+    .project-item:hover::before {
+        display: flex;
+    }
+
+    .project-item:hover{
+        transform: none;
+    }
+    
 
     #mobile_btn {
         display: block;
@@ -1368,9 +1388,50 @@ footer h3 {
         flex-direction: column;
         gap: 15px;
     }
+
+    .buttons a:hover {
+        transform: none;
+        background: linear-gradient(90deg, rgba(129, 91, 212, 1) 0%, rgb(83, 21, 79) 100%);
+    }
+
+    .socialmedias a:hover {
+        background-color: transparent;
+        transform: none;
+    }
+
+    .socialmedias i:hover {
+        background-color: rgba(36, 36, 36, 0.6);
+    }
+
+    .ability:hover img {
+        filter: none;
+    }
+
+
+    .project-item.hovered {
+        transform: none;
+    }
+
+    .btn-project:hover {
+        background: linear-gradient(90deg, rgba(129, 91, 212, 1) 0%, rgba(247, 0, 234, 1) 100%);
+        transform: none;
+    }
+
+    body.light-mode .buttons a:hover,
+    body.light-mode #home li {
+        background: linear-gradient(90deg, #080808 0%, #363636 100%);
+    }
+
+    body.light-mode .socialmedias i:hover {
+        background-color: #151922;
+    }
+
+    body.light-mode .ability:hover img {
+        filter: none;
+    }
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width: 700px) {
     .project-title h1 {
         font-size: 1.8em;
     }
@@ -1394,21 +1455,15 @@ footer h3 {
     .home-txt h3 {
         font-size: 1em;
     }
-
 }
 
-@media screen and (max-width:500px) {
-
+@media screen and (max-width: 500px) {
     #intro i {
         font-size: 1.3em;
     }
 
     #intro h1 {
         font-size: 1.3em;
-    }
-
-    #home {
-        height: 75vh;
     }
 
     #home ul {
@@ -1547,7 +1602,7 @@ footer h3 {
     }
 }
 
-@media screen and (max-width:400px) {
+@media screen and (max-width: 400px) {
     #intro i {
         font-size: 1.3em;
     }
@@ -1562,10 +1617,6 @@ footer h3 {
 
     .home-txt h2 {
         font-size: 1.1em;
-    }
-
-    #about {
-        margin-top: 30px;
     }
 
     #home li {
@@ -1589,7 +1640,7 @@ footer h3 {
     }
 }
 
-@media screen and (max-width:330px) {
+@media screen and (max-width: 330px) {
     #intro i {
         font-size: 1.3em;
     }
