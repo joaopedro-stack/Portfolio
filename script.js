@@ -103,9 +103,10 @@ $(document).ready(function () {
     $('#mobile_btn').find('i').toggleClass('fa-x');
   });
 
-  $('.certificate-img').on('click', function () {
-    var newSrc = $(this).find('img').attr('src');
-    $('.view-certificate').addClass('show showCertificate').find('img').attr('src', newSrc);
+  $('.certificate').on('click', function () {
+    var bg = $(this).css('background-image');
+    var imageUrl = bg.replace(/^url\(["']?/, '').replace(/["']?\)$/, '');
+    $('.view-certificate').addClass('show showCertificate').find('img').attr('src', imageUrl);
     $('body').addClass('mostrar-before');
   });
 
@@ -126,26 +127,26 @@ $(document).ready(function () {
       usedproject.html(`Unsplash API <br> OpenWeather API <br> React <br> HTML <br> CSS <br> Javascript`)
       acessProject.attr('href', 'https://weatherapp-stack.netlify.app/');
       acessRepo.attr('href', 'https://github.com/joaopedro-stack/WeatherApp')
-      videoProject.attr('src' , 'https://drive.google.com/file/d/1mgbCgYMikjFQmWCo9gHCFDz2waNtgKBb/preview')
-    }else if(projectselected == "Jogo da Memória"){
+      videoProject.attr('src', 'https://drive.google.com/file/d/1mgbCgYMikjFQmWCo9gHCFDz2waNtgKBb/preview')
+    } else if (projectselected == "Jogo da Memória") {
       projectdescription.html(`Este projeto foi o fechamento do meu curso técnico em informática, neste projeto criei um jogo da memória utilizando C# com o windows form ele foi desenvolvido no Visual Studio 2022, mesmo dando trabalho e consumindo muito tempo foi muito gratificante e divertido fazer ele foi um projeto trabalhoso e que fiz do jeito que queria, fiquei muito feliz com o resultado.`);
       usedproject.html(`C# <br> .Net Framework <br> Windows Form`)
       //acessProject.attr('href', 'https://weatherapp-stack.netlify.app/');
       acessRepo.attr('href', 'https://github.com/joaopedro-stack/Jogo_Da_Memoria')
-      videoProject.attr('src' , 'https://drive.google.com/file/d/1Q2WFwfq1V-N5AbbD3yEvJwIQJcnemSI9/preview')
-    }else{
+      videoProject.attr('src', 'https://drive.google.com/file/d/1Q2WFwfq1V-N5AbbD3yEvJwIQJcnemSI9/preview')
+    } else {
       projectdescription.html(`Este projeto foi o fechamento do meu curso técnico em informática, neste projeto criei um jogo da memória utilizando C# com o windows form ele foi desenvolvido no Visual Studio 2022, mesmo dando trabalho e consumindo muito tempo foi muito gratificante e divertido fazer ele foi um projeto trabalhoso e que fiz do jeito que queria, fiquei muito feliz com o resultado.`);
       usedproject.html(`Tmdb API <br> React <br> HTML <br> CSS <br> Javascript`)
       acessProject.attr('href', 'https://cinemmatch.netlify.app/');
       acessRepo.attr('href', 'https://github.com/joaopedro-stack/CineMatch')
-      videoProject.attr('src' , 'https://drive.google.com/file/d/1HovzHJxd0tGjwa1SrqqwYHKR-qw2BVsK/preview')
+      videoProject.attr('src', 'https://drive.google.com/file/d/1HovzHJxd0tGjwa1SrqqwYHKR-qw2BVsK/preview')
     }
     $('.view-project').addClass('show showCertificate').find('h2').text(project);
     $('body').addClass('mostrar-before');
   });
 
   $(document).on('click', function (e) {
-    const isCertificate = $(e.target).closest('.view-certificate, .certificate-img').length;
+    const isCertificate = $(e.target).closest('.view-certificate, .certificate').length;
     const isProject = $(e.target).closest('.view-project, .project-item').length;
 
     if ($('body').hasClass('mostrar-before') && !isCertificate && !isProject) {

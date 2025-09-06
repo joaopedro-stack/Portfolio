@@ -145,8 +145,23 @@ body.light-mode .project-choice i {
 }
 
 body.light-mode .ability,
-body.light-mode .certificate {
+body.light-mode .certificate,
+body.light-mode .view-certificate,
+body.light-mode .view-project {
     background-color: #9C8867;
+}
+
+body.light-mode .project-name {
+    color: #151922;
+}
+
+body.light-mode .btn-project {
+    background: #151A22;
+    background: linear-gradient(90deg, #151A22, #70624a);
+}
+
+body.light-mode .btn-project:hover {
+    background: #151A22;
 }
 
 body.light-mode .typewriter::after {
@@ -163,8 +178,9 @@ body.light-mode .socialmedias i {
     color: #f2f2f2;
 }
 
-body.light-mode .project-item {
-    border-bottom: 3px solid #364031;
+body.light-mode .project-item,
+body.light-mode .certificate {
+    border-bottom: 3px solid #9C8867;
 }
 
 body.light-mode .about-img img {
@@ -542,15 +558,15 @@ li {
     text-shadow: 1px 1px 2px #815BD4;
 }
 
-.socialmedias i:hover{
+.socialmedias i:hover {
     background-color: #363636
 }
 
-.buttons a:hover{
+.buttons a:hover {
     background: #815BD4;
 }
 
-.ability:hover img{
+.ability:hover img {
     filter: drop-shadow(1px 3px 10px #f2f2f2);
 }
 
@@ -996,7 +1012,7 @@ li {
     transition: transform .4s ease;
 }
 
-.btn-project:hover{
+.btn-project:hover {
     background: #f700ea;
 }
 
@@ -1038,21 +1054,17 @@ a {
 }
 
 .certificate-txt {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    z-index: 3;
+    text-align: center;
+}
+
+.certificate h2 {
+    font-weight: 800;
 }
 
 .certificate-img {
     width: 100%;
     height: 50%;
-}
-
-.certificate-img img {
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
 .certificates {
@@ -1065,16 +1077,42 @@ a {
 }
 
 .certificate {
-    background-color: rgba(36, 36, 36, 0.7);
-    width: 35%;
-    height: 530px;
-    border-radius: 5px;
-    border: 1px solid #fff;
+    width: 30%;
+    height: 400px;
     display: flex;
     padding: 2%;
-    flex-direction: column;
     gap: 30px;
+    position: relative;
     color: #fff;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    border-bottom: 3px solid #815BD4;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s ease;
+}
+
+.certificate::before {
+    content: '';
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.certificate:hover {
+    z-index: 5;
+    transform: scale(1.1);
+}
+
+.certificate1 {
+    background-image: url('src/Certificates/certificate-html.png');
+}
+
+.certificate2 {
+    background-image: url('src/Certificates/certificate-logica.png');
 }
 
 .view-certificate {
@@ -1108,36 +1146,36 @@ a {
     gap: 35px;
 }
 
-.content-project{
+.content-project {
     display: flex;
     justify-content: space-around;
     gap: 35px;
 }
 
-.video-projeto{
+.video-projeto {
     width: 50rem;
     height: 25rem;
 }
 
-.project-sobre{
+.project-sobre {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.project-name{
+.project-name {
     font-size: 2em;
     color: #815BD4;
 }
 
 .project-description,
-.used-project{
+.used-project {
     font-size: .9rem;
     font-weight: 200;
     color: #f2f2f2;
 }
 
-.info{
+.info {
     width: 50%;
 }
 
@@ -1299,6 +1337,19 @@ footer h3 {
         padding: 5px;
         height: 150px;
     }
+
+    .content-project {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .info {
+        width: 100%;
+    }
+
+    .video-projeto {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 1000px) {
@@ -1336,10 +1387,10 @@ footer h3 {
         display: flex;
     }
 
-    .project-item:hover{
+    .project-item:hover {
         transform: none;
     }
-    
+
 
     #mobile_btn {
         display: block;
@@ -1456,6 +1507,15 @@ footer h3 {
 
     .home-txt h3 {
         font-size: 1em;
+    }
+
+    .btns {
+        gap: 15px;
+    }
+
+    .btn-project {
+        padding: 6px 10px;
+        font-size: .6em;
     }
 }
 
@@ -1602,6 +1662,28 @@ footer h3 {
     .toggle-switch input[type="checkbox"]:checked+.toggle-switch-background .toggle-switch-handle {
         transform: translateX(25px);
     }
+
+    .view-project {
+        width: 85%;
+    }
+
+    .btns {
+        gap: 10px;
+    }
+
+    .btn-project {
+        padding: 6px 10px;
+        font-size: .5em;
+    }
+
+    .project-name {
+        font-size: 1.5em;
+    }
+
+    .project-description,
+    .used-project {
+        font-size: .7em;
+    }
 }
 
 @media screen and (max-width: 400px) {
@@ -1639,6 +1721,10 @@ footer h3 {
 
     .abilities-icons a {
         width: 28%;
+    }
+
+    .view-project {
+        width: 90%;
     }
 }
 
