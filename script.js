@@ -135,7 +135,7 @@ $(document).ready(function () {
       acessRepo.attr('href', 'https://github.com/joaopedro-stack/Jogo_Da_Memoria')
       videoProject.attr('src', 'https://drive.google.com/file/d/1Q2WFwfq1V-N5AbbD3yEvJwIQJcnemSI9/preview')
     } else {
-      projectdescription.html(`Este projeto foi o fechamento do meu curso técnico em informática, neste projeto criei um jogo da memória utilizando C# com o windows form ele foi desenvolvido no Visual Studio 2022, mesmo dando trabalho e consumindo muito tempo foi muito gratificante e divertido fazer ele foi um projeto trabalhoso e que fiz do jeito que queria, fiquei muito feliz com o resultado.`);
+      projectdescription.html(`Este projeto foi criado com a funcionalidade de recomendar filmes com base de outro filme que você goste, o usuário coloca o nome do filme que gosta e o app faz a busca com esse filme na API e busca filmes parecidos com o relatado.`);
       usedproject.html(`Tmdb API <br> React <br> HTML <br> CSS <br> Javascript`)
       acessProject.attr('href', 'https://cinemmatch.netlify.app/');
       acessRepo.attr('href', 'https://github.com/joaopedro-stack/CineMatch')
