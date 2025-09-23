@@ -1050,6 +1050,10 @@ li {
     background-image: url('src/Projects/MemoryGame/img_memorygame.png');
 }
 
+.item5 {
+    background-image: url('src/Projects/Burgos_House/BurgosHouse.png');
+}
+
 a {
     text-decoration: none;
 }
@@ -1650,7 +1654,7 @@ footer h3 {
         font-size: 1.6em;
     }
 
-    .content{
+    .content {
         position: fixed;
         right: 25px;
     }

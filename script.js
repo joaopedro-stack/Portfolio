@@ -134,7 +134,14 @@ $(document).ready(function () {
       //acessProject.attr('href', 'https://weatherapp-stack.netlify.app/');
       acessRepo.attr('href', 'https://github.com/joaopedro-stack/Jogo_Da_Memoria')
       videoProject.attr('src', 'https://drive.google.com/file/d/1Q2WFwfq1V-N5AbbD3yEvJwIQJcnemSI9/preview')
-    } else {
+    }else if (projectselected == "Burgos House") {
+      projectdescription.html(`Visando criar algo como um e-commerce esse foi meu primeiro feito para uma hamburgueria fícticia, contém carrinho e os pedidos chegam via whatsapp`);
+      usedproject.html(`HTML <br> CSS <br> JS <br>JQUERY`);
+      acessProject.attr('href', 'https://burgoshouse.netlify.app/');
+      acessRepo.attr('href', 'https://github.com/joaopedro-stack/BurgosHouse')
+      videoProject.attr('src', 'https://drive.google.com/file/d/1T0DVQDQZQ-UCJhoq_yNdse1L9STyPsKC/preview')
+    } 
+    else {
       projectdescription.html(`Este projeto foi criado com a funcionalidade de recomendar filmes com base de outro filme que você goste, o usuário coloca o nome do filme que gosta e o app faz a busca com esse filme na API e busca filmes parecidos com o relatado.`);
       usedproject.html(`Tmdb API <br> React <br> HTML <br> CSS <br> Javascript`)
       acessProject.attr('href', 'https://cinemmatch.netlify.app/');
