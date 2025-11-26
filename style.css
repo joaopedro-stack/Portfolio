@@ -1054,6 +1054,18 @@ li {
     background-image: url('src/Projects/Burgos_House/BurgosHouse.png');
 }
 
+.item6 {
+    background-image: url('src/Projects/Movies_Lib/Movies_Lib.png');
+}
+
+.item7 {
+    background-image: url('src/Projects/To_Do_Typescript/To_Do.png');
+}
+
+.item8 {
+    background-image: url('src/Projects/Reactgram/Reactgram.png');
+}
+
 a {
     text-decoration: none;
 }
@@ -1118,6 +1130,18 @@ a {
 
 .certificate2 {
     background-image: url('src/Certificates/certificate-logica.png');
+}
+
+.certificate3 {
+    background-image: url('src/Certificates/certificate-react.jpg');
+}
+
+.certificate4 {
+    background-image: url('src/Certificates/certificate-genexus.png');
+}
+
+.certificate5 {
+    background-image: url('src/Certificates/certificate-senac.png');
 }
 
 .view-certificate {
