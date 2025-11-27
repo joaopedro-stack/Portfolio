@@ -1144,6 +1144,10 @@ a {
     background-image: url('src/Certificates/certificate-senac.png');
 }
 
+.certificate6 {
+    background-image: url('src/Certificates/certificate-javascript.png');
+}
+
 .view-certificate {
     position: fixed;
     z-index: 10000;
