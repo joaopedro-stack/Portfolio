@@ -119,11 +119,7 @@ $(document).ready(function () {
     var acessRepo = $('.acessar-repositorio')
     var acessLinkedin = $('.acessar-linkendin')
     var videoProject = $('.video-projeto')
-    if (projectselected == "Destino dos Sonhos") {
-      projectdescription.html(`Criei esse projeto para ele ser uma Landing Page para uma agência de viagens, foi muito gratificante fazer esse projeto pois pude treinar muito CSS e como estilizar uma página com ele.`);
-      usedproject.html(`HTML <br> CSS <br> Jquery`)
-      acessProject.css("display", 'flex');
-    } else if (projectselected == "Weather App") {
+    if (projectselected == "Weather App") {
       projectdescription.html(`Neste projeto utilizei o Vite para criar um app em React a idéia do projeto e mostrar a previsão do tempo atual e a dos próximos 5 dias com base na cidade que você pesquisar. <br><br> Utilizei o Axios para consumir a API do OpenWeather para buscar as informações sobre o clima também utilizei a API da Unsplash que gera as imagens de fundo da tela ele também utiliza a cidade que você utilizou como parametro para buscar a próxima imagem de fundo.`);
       usedproject.html(`Unsplash API <br> OpenWeather API <br> React <br> HTML <br> CSS <br> Javascript`)
       acessProject.attr('href', 'https://weatherapp-stack.netlify.app/');
@@ -138,14 +134,14 @@ $(document).ready(function () {
       videoProject.attr('src', 'https://drive.google.com/file/d/1Q2WFwfq1V-N5AbbD3yEvJwIQJcnemSI9/preview')
     } else if (projectselected == "Burgos House") {
       projectdescription.html(`Visando criar algo como um e-commerce esse foi meu primeiro feito para uma hamburgueria fícticia, contém carrinho e os pedidos chegam via whatsapp`);
-      usedproject.html(`HTML <br> CSS <br> JS <br>JQUERY`);
+      usedproject.html(`HTML <br> CSS <br> Javascript <br>JQUERY`);
       acessProject.css("display", 'flex');
       acessProject.attr('href', 'https://burgoshouse.netlify.app/');
       acessRepo.attr('href', 'https://github.com/joaopedro-stack/BurgosHouse')
       videoProject.attr('src', 'https://drive.google.com/file/d/1T0DVQDQZQ-UCJhoq_yNdse1L9STyPsKC/preview')
     } else if (projectselected == "Movies Lib") {
       projectdescription.html(`Projeto feito para pesquisar sobre filmes, nele você pode efetuar a pesquisa ver a sinopse e todas as informações como faturamento, orçamento, duração etc... `);
-      usedproject.html(`HTML <br> CSS <br> JS <br>React <br> Vite <br> TMDB API`);
+      usedproject.html(`HTML <br> CSS <br> Javascript <br>React <br> Vite <br> TMDB API`);
       acessProject.css("display", 'flex');
       acessProject.attr('href', 'https://joaopflix.netlify.app/');
       acessRepo.attr('href', 'https://github.com/joaopedro-stack/movies_lib')
