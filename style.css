@@ -1062,6 +1062,10 @@ li {
     background-image: url('src/Projects/Reactgram/Reactgram.png');
 }
 
+.item9 {
+    background-image: url('src/Projects/Passeio_App/Passeio_App.png');
+}
+
 a {
     text-decoration: none;
 }
@@ -1140,8 +1144,12 @@ a {
     background-image: url('src/Certificates/certificate-senac.png');
 }
 
-.certificate6 {
+.certificate6 { 
     background-image: url('src/Certificates/certificate-javascript.png');
+}
+
+.certificate7 {
+    background-image: url('src/Certificates/certificate-angular.jpg');
 }
 
 .view-certificate {

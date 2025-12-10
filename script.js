@@ -161,6 +161,13 @@ $(document).ready(function () {
       acessProject.attr('href', 'https://reactgraam.netlify.app/');
       acessRepo.attr('href', 'https://github.com/joaopedro-stack/ReactGram')
       videoProject.attr('src', 'https://drive.google.com/file/d/1Hsht_fK-bR_pWHl27oanme1khhx9Ndq8/preview')
+    }else if (projectselected == "Passeio_App") {
+      projectdescription.html(`Este projeto foi feito utilizando a framework Angular, uma excelente opção para desenvolvimento de apps Web, o projeto é uma lista de locais onde o usuário cadastra as categorias e os lugares, estes possuindo as categorias cadastradas, podendo filtrar por categoria ou nome do local. Foi usado também o GoogleAuth como forma de autenticação`);
+      usedproject.html(`Angular <br> Tailwind CSS <br> Typescript`);
+      acessProject.css("display", 'flex');
+      acessProject.attr('href', 'https://passeio-app-angular.vercel.app/');
+      acessRepo.attr('href', 'https://github.com/joaopedro-stack/passeio-app-angular')
+      videoProject.attr('src', 'https://drive.google.com/file/d/1Hsht_fK-bR_pWHl27oanme1khhx9Ndq8/preview')
     }
     else {
       projectdescription.html(`Este projeto foi criado com a funcionalidade de recomendar filmes com base de outro filme que você goste, o usuário coloca o nome do filme que gosta e o app faz a busca com esse filme na API e busca filmes parecidos com o relatado.`);
