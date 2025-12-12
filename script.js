@@ -167,7 +167,7 @@ $(document).ready(function () {
       acessProject.css("display", 'flex');
       acessProject.attr('href', 'https://passeio-app-angular.vercel.app/');
       acessRepo.attr('href', 'https://github.com/joaopedro-stack/passeio-app-angular')
-      videoProject.attr('src', 'https://drive.google.com/file/d/1Hsht_fK-bR_pWHl27oanme1khhx9Ndq8/preview')
+      videoProject.attr('src', 'https://drive.google.com/file/d/1c-3wJXtTu83CfkumzVYPq69zwUdjGIeD/preview')
     }
     else {
       projectdescription.html(`Este projeto foi criado com a funcionalidade de recomendar filmes com base de outro filme que você goste, o usuário coloca o nome do filme que gosta e o app faz a busca com esse filme na API e busca filmes parecidos com o relatado.`);
