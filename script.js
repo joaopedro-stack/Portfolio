@@ -82,14 +82,16 @@ $(document).ready(function () {
       $('.choice').removeClass('saida-left').addClass('entrada-left')
       $('.project-wrapper').removeClass('saida-left').addClass('entrada-left')
     }
+    const contactTop = $('#contact').offset().top;
+    const windowBottom = $(window).scrollTop() + $(window).height();
+
     if (scrollPosition < 600) {
       activeSectionIndex = 0;
     } else if (scrollPosition < 1150) {
       activeSectionIndex = 1;
-    } else if ($(window).scrollTop() + $(window).height() >= $(document).height()) {
+    } else if (windowBottom >= contactTop + 80) {
       activeSectionIndex = 3;
-    }
-    else {
+    } else {
       activeSectionIndex = 2;
     }
 

@@ -8,11 +8,13 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="src/desenvolvedor.png" type="image/x-icon">
+    <meta name="description" content="Portfólio de João Pedro Bastos Santana — Desenvolvedor Fullstack apaixonado por React, Node.js, Angular e muito mais.">
+    <meta name="theme-color" content="#0d091c">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
         integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="style.css">
-    <title>Portfólio</title>
+    <title>João Pedro | Desenvolvedor Fullstack</title>
 </head>
 
 <body>
@@ -44,7 +46,7 @@
                         <div class="toggle-switch-handle"></div>
                     </div>
                 </label>
-                <button id="mobile_btn">
+                <button id="mobile_btn" aria-label="Abrir menu de navegação">
                     <i class="fa-solid fa-bars"></i>
                 </button>
             </div>
@@ -94,7 +96,33 @@
                 </div>
             </div>
             <div class="home-img">
-                <img src="src/Dog Man GIF by Pluralsight.gif"></img>
+                <div class="hero-animation">
+                    <div class="code-window">
+                        <div class="window-bar">
+                            <div class="window-dots">
+                                <span class="wd wd-r"></span>
+                                <span class="wd wd-y"></span>
+                                <span class="wd wd-g"></span>
+                            </div>
+                            <span class="window-filename">portfolio.js</span>
+                        </div>
+                        <div class="code-content">
+                            <div class="code-line l1"><span class="ck">const</span> <span class="cv">developer</span> <span class="co">=</span> <span class="cb">{</span></div>
+                            <div class="code-line l2">&nbsp;&nbsp;<span class="cp">name</span><span class="co">:</span> <span class="cs">'João Pedro'</span><span class="co">,</span></div>
+                            <div class="code-line l3">&nbsp;&nbsp;<span class="cp">role</span><span class="co">:</span> <span class="cs">'Fullstack Dev'</span><span class="co">,</span></div>
+                            <div class="code-line l4">&nbsp;&nbsp;<span class="cp">stack</span><span class="co">:</span> <span class="cb">[</span><span class="cs">'React'</span><span class="co">,</span> <span class="cs">'Node'</span><span class="co">,</span> <span class="cs">'Angular'</span><span class="cb">]</span><span class="co">,</span></div>
+                            <div class="code-line l5">&nbsp;&nbsp;<span class="cp">passion</span><span class="co">:</span> <span class="cs">'Building great things'</span><span class="co">,</span></div>
+                            <div class="code-line l6">&nbsp;&nbsp;<span class="cp">status</span><span class="co">:</span> <span class="cs">'open to work'</span></div>
+                            <div class="code-line l7"><span class="cb">}</span><span class="co">;</span></div>
+                            <div class="code-line l8"><span class="ck">export</span> <span class="ck">default</span> <span class="cv">developer</span><span class="co">;</span><span class="code-cursor-blink"></span></div>
+                        </div>
+                    </div>
+                    <span class="hero-badge hb-react">React</span>
+                    <span class="hero-badge hb-node">Node.js</span>
+                    <span class="hero-badge hb-ts">TypeScript</span>
+                    <span class="hero-badge hb-angular">Angular</span>
+                    <span class="hero-badge hb-sql">SQL</span>
+                </div>
             </div>
         </div>
 
@@ -116,7 +144,7 @@
                     </p>
                 </div>
                 <div class="about-img saida-right">
-                    <img src="src/eu.jpg" alt="">
+                    <img src="src/eu.jpg" alt="Foto de João Pedro Bastos Santana" loading="lazy">
                 </div>
             </div>
         </div>
@@ -427,7 +455,7 @@
         </div>
 
         <footer id="contact">
-            <h3>&copy 2025 João Pedro Bastos Santana</h3>
+            <h3>&copy; 2025 João Pedro Bastos Santana</h3>
             <div class="socialmedias">
                 <a target="_blank" href="https://wa.me/5518998260759"><i class="fa-brands fa-whatsapp"></i></a>
                 <a target="_blank" href="https://www.instagram.com/joao_.pedrobastos/"><i
